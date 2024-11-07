@@ -24,6 +24,10 @@ int main(void)
 	n2 = (a/10)%10; 
 	n3 = (a/100)%10; 
 	
+	n1 = n1<n2 ? n2 : n1;
+	n3>n1 ? printf ("%d", n3) : printf ("%d", n1);
+	
+	/*  Old Rev/
 	if(n1<n2)
 	{
 		n1=n2;
@@ -36,7 +40,7 @@ int main(void)
 	{
 		printf ("%d", n1);
 	}
-
+	*/
 	return 0;
 }
 
