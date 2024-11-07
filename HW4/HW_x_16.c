@@ -18,10 +18,12 @@ YES
 
 int main(void)
 {
-	int a, b, c;
-	
+	int a, b, c;	
 	scanf ("%d%d%d", &a, &b, &c);
 	
+	((a<b) & (b<c)) != 0 ? printf ("YES") : printf ("NO");
+	
+	/*  Old Rev/
 	if((a<b) & (b<c))
 	{
 		printf ("YES");	
@@ -30,7 +32,7 @@ int main(void)
 	{
 		printf ("NO");	
 	}
-	
+	*/
 	return 0;
 }
 
