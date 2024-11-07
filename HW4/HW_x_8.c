@@ -21,6 +21,18 @@ int main(void)
 	int a, b, c;
 	
 	scanf ("%d%d%d", &a, &b, &c);
+	
+	
+	if(a<b)
+	{
+		a=b;
+	}
+	
+	c>a ? printf ("%d", c) : printf ("%d", a);
+	
+	
+	// Old Rev. 
+	/*
 	if(a<b)
 	{
 		a=b;
@@ -33,7 +45,6 @@ int main(void)
 	{
 		printf ("%d", a);
 	}
-	
+	*/
 	return 0;
 }
-
