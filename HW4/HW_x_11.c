@@ -33,20 +33,29 @@ int main(void)
 		max=b;
 	}
 	
-	if(c>max)
+	max = c>max ? c : max;
+	min = c<min ? c : min;
+	max = d>max ? d : max;
+	min = d<min ? d : min;
+	max = e>max ? e : max;
+	min = e<min ? e : min;
+	
+	// Old Rev.
+	/*if(c>max)
 	{
 		max=c;
-	}
+	}	
 		
 	if(c<min)
 	{
 		min=c;
-	}
-	
+	}	
 	if(d>max)
 	{
 		max=d;
 	}		
+	
+	
 	if(d<min)
 	{
 		min=d;
@@ -56,11 +65,14 @@ int main(void)
 	{
 		max=e;
 	}		
+	
 	if(e<min)
 	{
 		min=e;
 	}
-
+	*/
+	
+	
 	printf ("%d", min+max);
 
 	
