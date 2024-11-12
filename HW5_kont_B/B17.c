@@ -28,23 +28,26 @@ int main(void)
 {
     int a, sum=0, prod=1;
     scanf ("%d", &a);
-    
-    for (int i=10; i<=a; i++)
+
+    for (int i=11; i<=a; i++)
     {
-		for (int b=i; ((b%10)|(b/10)) != 0; b /= 10)
-		{								
-			prod = prod *(b%10);
-			sum += (b%10);
-			//printf ("%d", b);	
-			printf ("%d %d xx ", prod, sum);									
-			
-			
+        for (int b=i; ((b%10)|(b/10)) != 0; b /= 10)
+        {
+            prod *= (b%10);
+            sum += (b%10);	
+        
+        }
+        if (prod==sum)
+        {
+        printf ("%d ", i);
 		}
-		/*if (prod==sum)
-		{
-			//printf ("%d", i);
-		}*/
+        prod=1;
+        sum=0;
+        /*if (prod==sum)
+        {
+        	//printf ("%d", i);
+        }*/
     }
-    
+
     return 0;
 }
