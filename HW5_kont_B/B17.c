@@ -43,10 +43,7 @@ int main(void)
 		}
         prod=1;
         sum=0;
-        /*if (prod==sum)
-        {
-        	//printf ("%d", i);
-        }*/
+
     }
 
     return 0;
