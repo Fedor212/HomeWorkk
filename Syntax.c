@@ -7,6 +7,25 @@ int abss (int a)
 	return -a;
 }
 
+int a, b, p;  // Сначала объявить
+int power (int a, int p)
+{
+    if (p>0)
+    {
+		int c =1;
+        for (int i=1; i<=p; i++)
+            c = c*a;
+                return c;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+
+
+
 //  Cycles
 for (int i=11; i<=a; i++)
 {
