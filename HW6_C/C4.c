@@ -1,5 +1,3 @@
-/*Функция по формуле
-Описать функцию вычисления f(x) по формуле: 
 f(x)= x*x при -2 ≤ x < 2;
 x*x+4x+5 при x ≥ 2;
 4 при x < -2.
@@ -31,35 +29,34 @@ int fm (int a)
 {
     if ((a>=-2)&(a<2))
     {
-        a*=a;   
+        a*=a;
     }
 
     else if (a>=2)
     {
-        a=a*a+4*a+5;       
+        a=a*a+4*a+5;
     }
 
     else if (a<-2)
     {
-        a=4;         
+        a=4;
     }
-     return a;
+    return a;
 }
 
 int main(void)
-{	
-	//scanf("%d", &b);	
-       while (b !=0) 
-		{ 	
-			scanf("%d", &b);	
-		     if (b!=0)		
-				if(fm(b)>max)	
-					max = fm(b);
-			  
-			    // max=b-'0';
-		       
-		
-		}
-	 printf("%d ", max);
+{
+    while (b !=0)
+    {
+        scanf("%d", &b);
+        if (b!=0)
+            if(fm(b)>max)
+                max = fm(b);
+
+        // max=b-'0';
+
+
+    }
+    printf("%d ", max);
     return 0;
 }
