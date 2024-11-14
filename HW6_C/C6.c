@@ -15,19 +15,19 @@
 Результат работы
 134217728 */
 
-#include <math.h>
+//#include <math.h>
 #include <stdio.h>
 #include <stdint.h>
 //#include <locale.h>
 
 
 
-unsigned long long int b;
-int a;
 
-int poww (int a)
+//int a;
+
+unsigned long long poww (int a)
 {
-    unsigned long long int d=2;
+    unsigned long long d=2;
     if(a==1)
         return 1;
     else
@@ -40,11 +40,11 @@ int poww (int a)
     return d;
 }
 
+int a=1;
 int main(void)
 {
-    scanf ("%d", &a);
-    b = poww(a);
+    scanf ("%d", &a);   
     //printf ("size is %llu\n", sizeof(b));
-    printf ("%llu", b);
-    return 5;
+    printf ("%llu", poww(a));
+    return 0;
 }
