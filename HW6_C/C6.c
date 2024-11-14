@@ -15,29 +15,36 @@
 Результат работы
 134217728 */
 
-//#include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdint.h>
 //#include <locale.h>
 
 
-unsigned long long b;
+
+unsigned long long int b;
 int a;
+
 int poww (int a)
 {
-    int d=2;
-    if(a==1)    
+    unsigned long long int d=2;
+    if(a==1)
         return 1;
     else
+    {
         for (int i=2; i<a; i++)
+        {
             d=d*2;
+        }
+    }
     return d;
 }
+
 int main(void)
 {
     scanf ("%d", &a);
     b = poww(a);
-    //printf ("size is %llu\n", sizeof(b)); 
-    printf ("%lld", b);    
-    return 0;
+    //printf ("size is %llu\n", sizeof(b));
+    printf ("%llu", b);
+    return 5;
 }
