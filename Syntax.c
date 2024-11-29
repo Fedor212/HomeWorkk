@@ -1,3 +1,12 @@
+ if (((a%10)|(a/10)) != 0) {
+        b=a%2;
+        a=a/2;
+        rec(a);
+        printf ("%d", b);
+    }
+
+
+
 
 // Functions
 int abss (int a)
