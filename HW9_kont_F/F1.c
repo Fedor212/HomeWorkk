@@ -39,7 +39,7 @@ void sort_array(int size, int a[])
         int temp;
         for (int j = 0; j < (size-1); j++)
         {
-            if (a[j]<a[j+1])
+            if (a[j]>a[j+1])
             {
                 temp=a[j];
                 a[j]=a[j+1];
