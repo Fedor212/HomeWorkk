@@ -1,4 +1,25 @@
- if (((a%10)|(a/10)) != 0) {
+void sort_array(int size, int a[])
+{
+    for (int i = 0; i < size; i++)
+    {
+        int temp;
+        for (int j = 0; j < (size-1); j++)
+        {
+            if (a[j]>a[j+1])
+            {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+}
+
+
+
+
+
+if (((a%10)|(a/10)) != 0) {
         b=a%2;
 
         rec(a);
