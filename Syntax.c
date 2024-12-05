@@ -16,6 +16,18 @@ void sort_array(int size, int a[])
 }
 
 
+// Min search
+int min (int *arr, int len)
+{
+    int minn = arr[0];
+    for (int i = 1; i < len; i++)
+    {
+        if (minn>arr[i])
+            minn=arr[i];
+    }
+    return minn;
+}
+
 
 
 
