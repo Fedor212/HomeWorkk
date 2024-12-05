@@ -28,7 +28,17 @@ int min (int *arr, int len)
     return minn;
 }
 
-
+// Max search
+int max (int *arr, int len)
+{
+    int maxx = arr[0];
+    for (int i = 1; i < len; i++)
+    {
+        if (maxx<arr[i])
+            maxx=arr[i];
+    }
+    return maxx;
+}
 
 
 if (((a%10)|(a/10)) != 0) {
