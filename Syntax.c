@@ -1,3 +1,11 @@
+Geany IDE:
+https://www.geany.org/download/releases/
+
+GCC-компилятор
+https://jmeubank.github.io/tdm-gcc/download/
+
+
+
 void sort_array(int size, int a[])
 {
     for (int i = 0; i < size; i++)
