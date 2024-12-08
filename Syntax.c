@@ -9,6 +9,23 @@ https://jmeubank.github.io/tdm-gcc/download/
 	char message[30] = "abcFFFF \n new line";
 
 
+//********************Чтение из файла по символов и вывод их на печать в консоль*********************************
+ // файл чтения
+    char * filename = "data.txt";
+    // буфер для считавания данных из файла
+    char buffer[20];
+    // чтение из файла
+    FILE *fp = fopen(filename, "r");
+    if(fp)
+    {
+        // пока не дойдем до конца, считываем по 256 байт
+        while((fgets(buffer, 20, fp))!=NULL)
+        {
+            printf("%s \n", buffer);
+        }
+        fclose(fp);
+    } 
+
 //********** Запись строки в Файл!
 	// строка для записи
     char *message = "Hello\n the doctor away"; // указатель на char - фактически строка 
