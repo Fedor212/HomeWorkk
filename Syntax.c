@@ -8,7 +8,23 @@ https://jmeubank.github.io/tdm-gcc/download/
 	char *message = "Hello\n the doctor away"; // указатель на char - фактически строка
 	char message[30] = "abcFFFF \n new line";
 
+
+//********** Запись строки в Файл!
+	// строка для записи
+    char *message = "Hello\n the doctor away"; // указатель на char - фактически строка 
+    // файл для записи
+    char *filename = "test.txt";
+    // запись в файл
+    FILE *fp = fopen(filename, "w");
+    if(fp)
+    {
+        // записываем строку
+        fputs(message, fp);
+        fclose(fp);
+        printf("File has been written\n");
+    }
 	
+
 
 void sort_array(int size, int a[])
 {
