@@ -4,7 +4,11 @@ https://www.geany.org/download/releases/
 GCC-компилятор
 https://jmeubank.github.io/tdm-gcc/download/
 
+Строки можно объявлять и так и так:
+	char *message = "Hello\n the doctor away"; // указатель на char - фактически строка
+	char message[30] = "abcFFFF \n new line";
 
+	
 
 void sort_array(int size, int a[])
 {
