@@ -7,6 +7,7 @@ https://jmeubank.github.io/tdm-gcc/download/
 Строки можно объявлять и так и так:
 	char *message = "Hello\n the doctor away"; // указатель на char - фактически строка
 	char message[30] = "abcFFFF \n new line";
+ while ((fscanf(fp, "%[^\n]", origstring)) != 1) {}//считываем в массив origstring, пока не дойдем до переноса строки
 
 
 //********************Чтение из файла по символов и вывод их на печать в консоль*********************************
