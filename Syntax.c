@@ -10,12 +10,16 @@ https://jmeubank.github.io/tdm-gcc/download/
  while ((fscanf(fp, "%[^\n]", origstring)) != 1) {}//считываем в массив origstring, пока не дойдем до переноса строки
 
 
- //************ перевод массива цифр char в число int*************
-        int res=0;
-        for (int i = n-1, pow = 1;  i>=0 ; --i, pow*=10)
-            {
-                res +=  (origstring[i] - '0' )* pow;
-            }
+  //************ перевод массива цифр char в число int*************
+    int CharMass_to_int (char *string, int len)
+        {
+            int res=0;
+            for (int i = len-1, pow = 1;  i>=0 ; --i, pow*=10)
+                {
+                    res +=  (string[i] - '0' )* pow;
+                }
+                return res;
+        }
 
 //********************Чтение из файла по символу и вывод их на печать в консоль*********************************
  // файл чтения
