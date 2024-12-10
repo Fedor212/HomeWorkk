@@ -135,8 +135,8 @@ int power (int a, int p)
 
 
 
-//  Cycles
-for (int i=11; i<=a; i++)
+//  Cycles с несколькими аргументами
+for (int i = len-1, pow = 1;  i>=0 ; --i, pow*=10) 
 {
 	
 }
