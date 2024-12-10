@@ -25,8 +25,7 @@ https://jmeubank.github.io/tdm-gcc/download/
     // чтение из файла
     FILE *fp = fopen(filename, "r");
     if(fp)
-    {
-        // пока не дойдем до конца, считываем по 256 байт
+    {      
         while((fgets(buffer, 20, fp))!=NULL)
         {
             printf("%s \n", buffer);
