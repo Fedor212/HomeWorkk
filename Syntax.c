@@ -52,7 +52,7 @@ https://jmeubank.github.io/tdm-gcc/download/
         printf("File has been written\n");
     }
 	
-
+************ сортировка массива *************
 
 void sort_array(int size, int a[])
 {
