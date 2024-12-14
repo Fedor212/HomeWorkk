@@ -42,6 +42,7 @@ int main(void)
     }
     printf("origstring is: %s\n", origstring);
     printf("Mass lenth is: %ld\n", n);
+    printf("Last symbol is: %c\n", origstring[n-1]);
     fclose(fp);
     int slash_place;
     int dot_place=0;
@@ -74,13 +75,26 @@ int main(void)
     if (dot_place != 0)
     {
         origstring[dot_place+1] = 'h';
+        origstring[dot_place+2] = 't';
+        origstring[dot_place+3] = 'm';
+        origstring[dot_place+4] = 'l';
+        origstring[dot_place+5] = 0;
+    }
+    
+    if (dot_place == 0)
+    {
+		origstring[n] = '.';
+        origstring[n+1] = 'h';
+        origstring[n+2] = 't';
+        origstring[n+3] = 'm';
+        origstring[n+4] = 'l';
+        origstring[n+5] = 0;
     }
 
 
 
 
-    //~ fprintf(fp2, "%d", max);
+    fprintf(fp2, "%s", origstring);
     fclose(fp2);
     return 0;
 }
-
