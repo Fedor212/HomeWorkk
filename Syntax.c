@@ -9,6 +9,13 @@ https://jmeubank.github.io/tdm-gcc/download/
 	char message[30] = "abcFFFF \n new line";
  while ((fscanf(fp, "%[^\n]", origstring)) != 1) {}//считываем в массив origstring, пока не дойдем до переноса строки
 
+//********считываем в массив, пока не дойдем до переноса строки или EOF
+while (((fscanf(fp, "%[^\n]", origstring)) != 1) && ((fscanf(fp, "%s", origstring)) != EOF)) {}
+while (origstring[n]!=0)//пока символ строки не равен 0, считаем
+{
+n++; //количество символов в строке
+}
+
 
   //************ перевод массива цифр char в число int*************
     int CharMass_to_int (char *string, int len)
