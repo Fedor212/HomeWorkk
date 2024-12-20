@@ -189,7 +189,7 @@ struct temp_sensor
 //Строки в структуры передавать только через strcpy
 strcpy(temp_sensor.name, "Sensor One");
 Либо так
-struct temp_sensor Sensor_Two = {1996, "Sensor2222", 254.00f}
+struct temp_sensor Sensor_Two = {1996, "Sensor2222", 254.00f};
 
 
  • программа должна выводить тот текст, который указан в задании. Исключение - 
