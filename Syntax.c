@@ -180,6 +180,19 @@ for (; i<=a;)  //Без некоторых аргументов
  
  sum==0 ? printf ("YES") : printf ("NO");
 
+struct temp_sensor
+{
+    char name[50];
+    uint16_t year;
+    uint8_t month;
+    uint8_t day;
+    uint8_t hour;
+    uint8_t minute;
+    int8_t temperature;
+} ;
+//Строки в структуры передавать только через strcpy
+strcpy(temp_sensor.name, "Sensor One");
+
 
  • программа должна выводить тот текст, который указан в задании. Исключение - 
 	 в конце вывода для удобства чтения при отладке можно выводить перевод строки. 
