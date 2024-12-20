@@ -182,16 +182,14 @@ for (; i<=a;)  //Без некоторых аргументов
 
 struct temp_sensor
 {
-    char name[50];
     uint16_t year;
-    uint8_t month;
-    uint8_t day;
-    uint8_t hour;
-    uint8_t minute;
-    int8_t temperature;
+    char name[50];    
+    float temperature;
 } ;
 //Строки в структуры передавать только через strcpy
 strcpy(temp_sensor.name, "Sensor One");
+Либо так
+struct temp_sensor Sensor_Two = {1996, "Sensor2222", 254.00f}
 
 
  • программа должна выводить тот текст, который указан в задании. Исключение - 
