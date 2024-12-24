@@ -49,7 +49,7 @@ int main(void)
 
 
 
-    while (origstring[0]==' ')
+    while (origstring[0]==' ') //Удаляем пробелы в начале
     {
         for (int i = 0; i < 1000; i++)
         {
@@ -58,7 +58,7 @@ int main(void)
     }
 
 
-    for (int i = 1; i < 1000; i++)  //Удаляем пробелы в начале
+    for (int i = 1; i < 1000; i++)  
     {
         if ((origstring[i] == ' ') && (origstring[i+1] == ' '))
         {
