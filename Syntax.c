@@ -16,6 +16,8 @@ while (origstring[n]!=0)//пока символ строки не равен 0, 
 n++; //количество символов в строке
 }
 
+char string[z];  //Объявление массива длинной  в переменную
+memset(string, 0, sizeof string); //Потом его обнуление
 
   //************ перевод массива цифр char в число int*************
     int CharMass_to_int (char *string, int len)
