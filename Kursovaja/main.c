@@ -11,7 +11,7 @@ gcc -c -o main.o main.c
 #include "temp_api.h"
 #define SIZE 50
 
-int m=64;
+int m=64;  //*******************************************
 
 typedef struct {
     uint16_t year;
