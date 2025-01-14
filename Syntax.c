@@ -4,7 +4,10 @@ https://www.geany.org/download/releases/
 GCC-компилятор
 https://jmeubank.github.io/tdm-gcc/download/
 
-Where is the Python: C:\Users\fv.matchin\AppData\Local\Microsoft\WindowsApps
+
+cmd -> where python
+Python on work: C:\Users\fv.matchin\AppData\Local\Microsoft\WindowsApps
+
 	
 char *route = NULL; //Массив неопределенной длинны
 	
