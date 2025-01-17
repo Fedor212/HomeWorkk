@@ -5,7 +5,7 @@ GCC-компилятор
 https://jmeubank.github.io/tdm-gcc/download/
 
 Makefile
-gcc main.c -o main.exe MyLib.dll //Подключение библиотеки, она должна находиться в папке с проектом
+gcc -o test test.o functions.o visa64.dll //Подключение библиотеки, она должна находиться в папке с проектом
 
 
 cmd -> where python
