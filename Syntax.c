@@ -11,6 +11,7 @@ gcc -o test test.o functions.o visa64.dll //Подключение библио�
 cmd -> where python
 Python on work: C:\Users\fv.matchin\AppData\Local\Microsoft\WindowsApps
 
+scanf ("%d", &a);
 	
 char *route = NULL; //Массив неопределенной длинны
 	
