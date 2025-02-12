@@ -9,7 +9,7 @@ gcc -o test test.o functions.o visa64.dll //Подключение библио�
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ncurses install: install MSYS2: https://www.msys2.org/; 
 install packs: pacman -S ncurses
-install packs: pacman -S mingw-w64-ucrt-x86_64-ncurses;
+install packs: pacman -S mingw-w64-ucrt-x86_64-ncurses; (https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-ncurses)
 Install toolchanes: pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 В переменные окружения Win+R -> (sysdm.cpl) добавить C:\msys64\mingw64\lib (и снести GCC компилятор из путей)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
