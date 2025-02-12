@@ -7,6 +7,7 @@ https://jmeubank.github.io/tdm-gcc/download/
 Makefile
 gcc -o test test.o functions.o visa64.dll //Подключение библиотеки, она должна находиться в папке с проектом
 
+ncurses install: install MSYS2: https://www.msys2.org/
 
 cmd -> where python
 Python on work: C:\Users\fv.matchin\AppData\Local\Microsoft\WindowsApps
