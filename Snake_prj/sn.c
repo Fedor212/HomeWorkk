@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+//#include <ncurses.h>
 #include <ncurses/ncurses.h>
 #include <inttypes.h>
 #include <string.h>
@@ -8,9 +9,6 @@
 
 #define MIN_Y  2
 #define COLPAIR  5
-
-
-
 
 //double DELAY = 0.08;
 enum {LEFT=1, UP, RIGHT, DOWN, STOP_GAME=KEY_F(10)};
@@ -39,8 +37,8 @@ struct control_buttons default_controls[3] = {{KEY_DOWN, KEY_UP, KEY_LEFT, KEY_R
 // Цветовые пары
 void InitColors() {
     start_color();
-    init_pair(1, COLOR_GREEN, COLOR_BLACK);
-    init_pair(2, COLOR_CYAN, COLOR_BLACK);
+    init_pair(1, COLOR_GREEN, COLOR_BLACK);  // Стандартный цвет
+    init_pair(2, COLOR_CYAN, COLOR_BLACK);   // Дополнительные цвета
     init_pair(3, COLOR_MAGENTA, COLOR_BLACK);
     init_pair(4, COLOR_YELLOW, COLOR_BLACK);
     init_pair(5, COLOR_RED, COLOR_BLACK);
@@ -332,7 +330,7 @@ void repairSeed(struct food f[], size_t nfood, struct snake_t *head)
 int main()
 {
 
-    InitColors(); //Инициализируем цвета
+
     //initscr();
     int speed = 0;
     printf ("Enter the speed of The Snake 1 to 20 km/h: ");
@@ -344,6 +342,7 @@ int main()
     //чтобы начать работу с библиотекой ncurses необходимо её проинициализировать.
     //Для этого нужно вызвать функцию initscr().
     initscr();
+    InitColors(); //Инициализируем цвета
     initSnake(snake,START_TAIL_SIZE,10,10,1);
 
 
@@ -353,6 +352,8 @@ int main()
     curs_set(FALSE);    //Отключаем курсор
     attron(COLOR_PAIR(COLPAIR));
     mvprintw(0, 3,"Use arrows for control. Press 'F10' for EXIT");
+    //mvprintw(2, 3,"Has_Colors: %d", has_colors());
+
     //attroff(COLOR_PAIR(COLPAIR));
     timeout(0);    //Отключаем таймаут после нажатия клавиши в цикле
     initFood(food, MAX_FOOD_SIZE);
