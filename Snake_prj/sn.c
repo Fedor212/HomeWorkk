@@ -347,7 +347,7 @@ int main()
     raw();                // Откдючаем line buffering
     noecho();            // Отключаем echo() режим при вызове getch
     curs_set(FALSE);    //Отключаем курсор
-    attroff(COLOR_PAIR(2));
+    attron(COLOR_PAIR(2));
     mvprintw(0, 0,"Use arrows for control. Press 'F10' for EXIT");    
     timeout(0);    //Отключаем таймаут после нажатия клавиши в цикле
     initFood(food, MAX_FOOD_SIZE);
