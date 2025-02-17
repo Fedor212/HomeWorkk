@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//#include <curses.h>
 #include <ncurses/ncurses.h>
 #include <inttypes.h>
 #include <string.h>
 #include <unistd.h>
 
 #define MIN_Y  2
-#define COLPAIR  4
+#define COLPAIR  5
 
 
 
@@ -154,8 +153,6 @@ void initSnake(snake_t *head, size_t size, int x, int y, int color)
     head->tail = tail; // прикрепляем к голове хвост
     head->tsize = size+1;
     head->controls = default_controls[3];
-    InitColors(); //Инициализируем цвета
-    //color_pair = color;
 }
 
 /*
@@ -264,6 +261,7 @@ int checkDirection(snake_t* snake, int32_t key)
 
 void update(struct snake_t *head, struct food f[], const int32_t key, double DEL)
 {
+    attron(COLOR_PAIR(COLPAIR));
     clock_t begin = clock();
     go(head);
     goTail(head);
@@ -277,8 +275,10 @@ void update(struct snake_t *head, struct food f[], const int32_t key, double DEL
         addTail(head);
     }
     refresh();//Обновление экрана, вывели кадр анимации
+
     while ((double)(clock() - begin)/CLOCKS_PER_SEC<DEL)
     {}
+
 }
 //========================================================================
 //Код врезания головы в хвост
@@ -331,24 +331,29 @@ void repairSeed(struct food f[], size_t nfood, struct snake_t *head)
 
 int main()
 {
+
+    InitColors(); //Инициализируем цвета
+    //initscr();
     int speed = 0;
     printf ("Enter the speed of The Snake 1 to 20 km/h: ");
     //mvaddch(10, 10, "Enter the speed of The Snake 1 to 20 km/h: ");
     scanf ("%d", &speed);
-    //attron(COLOR_PAIR(COLPAIR));
-
-
+    //initscr();
     double DELAY = (21 - speed) * 0.01;
     snake_t* snake = (snake_t*)malloc(sizeof(snake_t));
-
-    initSnake(snake,START_TAIL_SIZE,10,10,1);
+    //чтобы начать работу с библиотекой ncurses необходимо её проинициализировать.
+    //Для этого нужно вызвать функцию initscr().
     initscr();
+    initSnake(snake,START_TAIL_SIZE,10,10,1);
+
+
     keypad(stdscr, TRUE); // Включаем F1, F2, стрелки и т.д.
     raw();                // Откдючаем line buffering
     noecho();            // Отключаем echo() режим при вызове getch
     curs_set(FALSE);    //Отключаем курсор
-    attron(COLOR_PAIR(2));
-    mvprintw(0, 0,"Use arrows for control. Press 'F10' for EXIT");    
+    attron(COLOR_PAIR(COLPAIR));
+    mvprintw(0, 3,"Use arrows for control. Press 'F10' for EXIT");
+    //attroff(COLOR_PAIR(COLPAIR));
     timeout(0);    //Отключаем таймаут после нажатия клавиши в цикле
     initFood(food, MAX_FOOD_SIZE);
     putFood(food, SEED_NUMBER);// Кладем зерна
