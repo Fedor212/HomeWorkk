@@ -130,5 +130,5 @@ void test_integrals(void) //Поиск корней тестовых функц�
     {
         float arrea = 0;
         arrea = integral(f22, 0, 3, 0.0001); 
-        printf("Root test: Goal: 4.5, result: %.5f\n", arrea);    
+        printf("Integral test: Goal: 4.5, result: %.5f\n", arrea);    
     }
